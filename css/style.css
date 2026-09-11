@@ -1,0 +1,536 @@
+/* ==================================================
+   SINGAPORE SOUNDSCAPE REPORT
+   DEP5118 Assignment 3
+
+   COLOUR PALETTE
+   Ivory        #F5F6EB
+   Sage Green   #B6BAA8
+   Dusty Rose   #D0A19D
+   Sand Stone   #E5D8C6
+   Dusty Blue   #83A0B6
+   ================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+/* ==================================================
+   GENERAL
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    color: #4D514E;
+    background-color: #F5F6EB;
+
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+
+    color: #536773;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+
+    color: #5E707A;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 7px;
+
+    color: #5E707A;
+}
+
+p {
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   NAVIGATION
+   ================================================== */
+
+.topnav {
+    width: 100%;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+
+    background-color: #E5D8C6;
+    border-bottom: 1px solid #D5C9B9;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav a {
+    color: #687278;
+
+    padding: 22px 18px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.topnav a:hover {
+    color: #536773;
+    background-color: rgba(131, 160, 182, 0.15);
+}
+
+.topnav a.active {
+    color: #536773;
+    font-weight: 600;
+
+    border-bottom: 3px solid #83A0B6;
+}
+
+
+/* ==================================================
+   HOME PAGE
+   ================================================== */
+
+.hero {
+    min-height: calc(100vh - 65px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+    color: #83A0B6;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+
+    color: #536773;
+}
+
+.hero h2 {
+    max-width: 700px;
+
+    font-size: 25px;
+    font-weight: 400;
+
+    color: #718087;
+
+    margin-bottom: 40px;
+}
+
+.hero p:not(.eyebrow) {
+    max-width: 700px;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    color: #59615E;
+}
+
+
+/* ==================================================
+   BUTTON
+   ================================================== */
+
+.button {
+    display: inline-block;
+    align-self: flex-start;
+
+    margin-top: 25px;
+    padding: 13px 22px;
+
+    background-color: #83A0B6;
+    color: #FFFFFF;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+
+    border-radius: 5px;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #6F8EA5;
+    color: #FFFFFF;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   STANDARD PAGE LAYOUT
+   ================================================== */
+
+.page-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 70px 40px 100px;
+}
+
+.page-container > h1 {
+    margin-bottom: 15px;
+}
+
+.intro {
+    max-width: 700px;
+
+    color: #68716E;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin-bottom: 55px;
+}
+
+
+/* ==================================================
+   WHAT ARE WE COLLECTING?
+   ================================================== */
+
+.data-collected {
+    max-width: 800px;
+
+    margin-bottom: 70px;
+}
+
+.data-collected h2 {
+    margin-bottom: 15px;
+}
+
+.data-collected p {
+    max-width: 700px;
+
+    color: #606865;
+}
+
+.data-collected ul {
+    padding: 24px 30px 24px 48px;
+    margin-top: 20px;
+
+    background-color: #E5D8C6;
+
+    border-left: 4px solid #B6BAA8;
+    border-radius: 6px;
+}
+
+.data-collected li {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    color: #535A57;
+}
+
+
+/* ==================================================
+   PARTICIPATION INSTRUCTIONS
+   ================================================== */
+
+.instructions {
+    max-width: 800px;
+
+    margin-bottom: 80px;
+}
+
+.instructions > h2 {
+    margin-bottom: 30px;
+}
+
+.instruction-step {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+
+    padding: 28px 0;
+
+    border-top: 1px solid #D8D8CC;
+}
+
+.instruction-step:last-child {
+    border-bottom: 1px solid #D8D8CC;
+}
+
+.step-number {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #83A0B6;
+}
+
+.instruction-step h3 {
+    font-size: 16px;
+
+    color: #5E707A;
+}
+
+.instruction-step p {
+    max-width: 650px;
+
+    margin-bottom: 0;
+
+    color: #606865;
+}
+
+
+/* ==================================================
+   INSTRUCTION IMAGES
+   ================================================== */
+
+.instruction-image {
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    background-color: #FFFFFF;
+
+    border: 2px solid #D7DFE3;
+    border-radius: 6px;
+}
+
+.image-caption {
+    margin-top: 7px !important;
+
+    font-size: 11px !important;
+    color: #7A817E !important;
+}
+
+
+/* ==================================================
+   PRIVACY NOTE
+   ================================================== */
+
+.privacy-note {
+    max-width: 800px;
+
+    margin: 40px 0;
+    padding: 22px 25px;
+
+    background-color: #E5D8C6;
+
+    border-left: 4px solid #B6BAA8;
+    border-radius: 6px;
+}
+
+.privacy-note h3 {
+    margin-bottom: 8px;
+
+    color: #5F4C4A;
+}
+
+.privacy-note p {
+    margin-bottom: 0;
+
+    color: #5F514F;
+}
+
+
+/* ==================================================
+   USHAHIDI SURVEY
+   ================================================== */
+
+.survey-section {
+    margin-top: 40px;
+
+    padding-top: 45px;
+
+    border-top: 1px solid #D8D8CC;
+}
+
+.survey-section h2 {
+    margin-bottom: 25px;
+
+    color: #536773;
+}
+
+.survey-section iframe {
+    display: block;
+
+    width: 100%;
+
+    background-color: #FFFFFF;
+
+    border: 2px solid #BCD0DC;
+    border-radius: 7px;
+}
+
+
+/* ==================================================
+   RESPONSE MAP
+   ================================================== */
+
+.map-frame {
+    width: 100%;
+
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    background-color: #FFFFFF;
+
+    border: 2px solid #BCD0DC;
+    border-radius: 7px;
+
+    overflow: hidden;
+}
+
+.map-frame iframe {
+    display: block;
+
+    width: 100%;
+
+    border: 0;
+}
+
+.map-explanation {
+    max-width: 750px;
+
+    padding: 25px;
+
+    background-color: #E5D8C6;
+
+    border-left: 4px solid #B6BAA8;
+    border-radius: 6px;
+}
+
+.map-explanation h2 {
+    margin-bottom: 15px;
+
+    color: #5F4C4A;
+}
+
+.map-explanation p {
+    color: #606865;
+}
+
+.map-explanation p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   LINKS
+   ================================================== */
+
+a {
+    color: #718FA6;
+}
+
+a:hover {
+    color: #536773;
+}
+
+
+/* ==================================================
+   TEXT SELECTION
+   ================================================== */
+
+::selection {
+    background-color: #BCD1DE;
+    color: #4B5960;
+}
+
+
+/* ==================================================
+   MOBILE
+   ================================================== */
+
+@media (max-width: 750px) {
+
+    .topnav {
+        padding: 0 15px;
+    }
+
+    .topnav a {
+        padding: 22px 10px;
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .page-container {
+        padding: 50px 25px 80px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .instruction-step {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+    }
+
+    .survey-section iframe {
+        height: 900px;
+    }
+
+    .map-frame iframe {
+        height: 600px;
+    }
+}
